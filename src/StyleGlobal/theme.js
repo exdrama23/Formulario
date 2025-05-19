@@ -1,5 +1,14 @@
 import { extendTheme } from "@chakra-ui/react";
 
+
+const form = document.querySelector('#formProjeto');
+if (form) {
+  form.style.overflowY = 'auto';
+  form.style.maxHeight = '80vh'; 
+  form.style.paddingBottom = '20px'; 
+}
+
+
 export const theme = extendTheme({
   fonts: {
     heading: "Poppins, sans-serif",
