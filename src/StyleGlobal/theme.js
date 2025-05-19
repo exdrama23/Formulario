@@ -11,7 +11,7 @@ export const theme = extendTheme({
       200: "#bbdefb",
       300: "#90caf9",
       400: "#64b5f6",
-      500: "#42a5f5", // cor principal
+      500: "#42a5f5",
       600: "#2196f3",
       700: "#1e88e5",
       800: "#1976d2",
@@ -22,42 +22,49 @@ export const theme = extendTheme({
     Input: {
       baseStyle: {
         field: {
+          borderRadius: "md",
           _focus: {
-            borderColor: "brand.500",
-            boxShadow: "0 0 0 1px #42a5f5",
+            borderColor: "brand.600",
+            boxShadow: "0 0 0 2px #2196f3",
           },
         },
       },
       defaultProps: {
-        size: "md",
-        variant: "outline",
+        size: "lg",
+        variant: "filled",
       },
     },
     Select: {
       baseStyle: {
         field: {
+          borderRadius: "md",
           _focus: {
-            borderColor: "brand.500",
-            boxShadow: "0 0 0 1px #42a5f5",
+            borderColor: "brand.600",
+            boxShadow: "0 0 0 2px #2196f3",
           },
         },
       },
       defaultProps: {
-        size: "md",
-        variant: "outline",
+        size: "lg",
+        variant: "filled",
       },
     },
     Button: {
       baseStyle: {
-        borderRadius: "md",
+        borderRadius: "xl",
         fontWeight: "bold",
+        transition: "all 0.3s ease-in-out",
       },
       variants: {
-        solid: (props) => ({
-          bg: "brand.500",
+        solid: () => ({
+          bgGradient: "linear(to-r, brand.500, brand.700)",
           color: "white",
           _hover: {
-            bg: "brand.600",
+            bgGradient: "linear(to-r, brand.600, brand.800)",
+            transform: "scale(1.05)",
+          },
+          _active: {
+            transform: "scale(0.98)",
           },
         }),
       },
@@ -66,9 +73,10 @@ export const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        bg: "#f7f9fc",
-        color: "#333",
-        fontSize: "16px",
+        bg: "#f0f4f8",
+        color: "#2d3748",
+        fontSize: "18px",
+        lineHeight: "1.6",
       },
     },
   },
